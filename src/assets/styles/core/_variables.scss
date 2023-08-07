@@ -1,0 +1,76 @@
+/* Color Theme */
+$primary-color: hsla(209, 100%, 46%, 1);
+$primary-color-faint: hsl(209, 100%, 70%);
+$primary-color-faint-2: hsla(209, 100%, 95%, 1);
+$primary-color-deep: hsl(219, 98%, 16%);
+$primary-color-very-deep: hsla(219, 100%, 10%, 1);
+$primary-light-color: hsl(210, 78%, 79%);
+$primary-light-color-hover: hsla(210, 80%, 91%, 1);
+$primary-light-color-faint: hsla(210, 90%, 80%, 1);
+
+$input-field-text-color: hsla(0, 0%, 74%, 1);
+$input-field-color-active: hsla(0, 0%, 95%, 1);
+
+$black: hsla(0, 0%, 0%, 0.8); //shadow for modal opened
+$green: hsla(146, 64%, 36%, 1); // checked in / success
+$green-hover: hsl(146, 91%, 70%);
+$green-disabled: hsl(149, 95%, 8%);
+$white: hsla(0, 0%, 100%, 1);
+$red-link: hsla(0, 100%, 45%, 1);
+$page-bg-color: #FFF;
+$dark: hsla(0, 0%, 31%, 1); // text color
+$dark-2: #726D76;
+$dark-3: hsla(0, 0%, 77%, 1);
+$light-gray: hsla(0, 0%, 88%, 1);
+$gray: #EDEFF0;
+$gray-hover: #E3E4E5;
+$gray-disabled: #bcb7b7;
+$gray-1: hsla(0, 0%, 20%, 1); // qr-code color scheme - blacklist-button
+$gray-2: hsla(0, 0%, 31%, 1); // normal text color
+$gray-3: hsla(0, 0%, 51%, 1); // timestamps / text-background - sub-header-blacklist
+$gray-4: hsla(0, 0%, 74%, 1); // sub-header text color
+$gray-5: hsla(0, 0%, 88%, 1); // checkbox background color
+$gray-6: hsla(0, 0%, 95%, 1); // input field bg-color
+
+$red: hsla(0, 79%, 63%, 1); // checked out
+$red-hover: hsl(0, 57%, 70%);
+$red-disabled: hsl(0, 96%, 9%);
+$red-deep: hsla(0, 100%, 45%, 1);
+
+$input-field-height: calc(1.5rem + 0.6rem + 2.4px);
+
+// Buttons
+$default-button-radius: 5px;
+$default-button-height: 40px;
+
+//Breakpoints
+
+// Animations
+$ease-in-out: null;
+$ease-in: null;
+$ease-out: null;
+
+//Fonts
+$primary-font: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$header-font: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$sub-header-font: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
+$link-font: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$logo-font: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+$brand-logo-drop-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+$brand-color-stop: #E56D16;
+$brand-color-offset-1: #1DB2FE;
+$brand-color-offset-2: #1DB2FE;
+
+/* Media Queries */
+.w-fit-content {
+  width: fit-content;
+}
+
+.w-max-content {
+  width: max-content;
+}
+
+.w-min-content {
+  width: min-content;
+}

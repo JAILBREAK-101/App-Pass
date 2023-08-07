@@ -1,0 +1,164 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+.button {
+  background-color: white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $primary-font;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  padding: 0 24px;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  transition-property: background, color, box-shadow;
+  transition-timing-function: ease-in-out;
+  user-select: none;
+  height: 40px;
+  border-radius: 8px;
+  text-align: center;
+
+  @include screen(small) {
+    width: 100%;
+  }
+
+  --primary {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      color: #ffffff;
+      background-color: darken($color: $primary-color-faint, $amount: 1);
+    }
+
+    &:disabled {
+      background-color: darken($color: $primary-color-deep, $amount: 1);
+      color: $primary-color;
+    }
+
+    &:visited {
+      background-color: darken($color: $primary-color-very-deep, $amount: 1);
+    }
+
+    &:focus {
+      outline: 1px solid $primary-color-faint-2;
+    }
+
+    &.button--outline {
+      border: 1px solid rgba($color: $primary-color, $alpha: 0.5);
+      color: $primary-color;
+
+      &:active {
+        background: transparent;
+      }
+
+      &:hover {
+        color: white;
+        background-color: $primary-color;
+        box-shadow: 0 6px 8px rgba($color: $primary-color, $alpha: 0.15);
+      }
+    }
+  }
+
+  --danger {
+    background-color: $red;
+    color: white;
+
+    &:hover {
+      color: white;
+      background-color: darken($color: $red-hover, $amount: 1);
+    }
+
+    &:focus {
+      outline: 1px solid $red-deep;
+    }
+
+    &:disabled {
+      background-color: $red-disabled;
+      color: $red-disabled;
+    }
+
+    &-full {
+      background-color: $red-deep;
+      color: white;
+    }
+  }
+
+  --success {
+    background-color: $green;
+    color: white;
+
+    &:hover {
+      background-color: $green-hover;
+    }
+
+    &:disabled {
+      background-color: $green-disabled;
+      color: $green;
+    }
+
+    &:visited {
+      background-color: $green-hover;
+    }
+
+    &:focus {
+      outline: 1px solid #151414;
+    }
+  }
+
+  &--link {
+    background-color: transparent;
+    color: $primary-color;
+  }
+
+  &--has-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.button-group, .button-link-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--column {
+    flex-direction: column;
+  }
+
+  @include screen(small) {
+    flex-direction: column;
+  }
+}
+
+.button-group button:not(:last-child) {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.button-link-group {
+  background-color: transparent;
+}
+
+.danger-link {
+  color: $red-link;
+}

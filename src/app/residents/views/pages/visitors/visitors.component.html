@@ -1,0 +1,54 @@
+<div class="visitors">
+
+  <header class="visitors-header">
+
+    <section class="visitors-dashboard">
+
+      <div class="visitors-dashboard-data"></div>
+      <div class="visitors-dashboard-data"></div>
+      <div class="visitors-dashboard-data"></div>
+
+    </section>
+
+    <section class="visitors-body">
+      <section class="visitors-body-header">
+
+        <div class="block-group">
+          <h2 class="visitors-body-text">Visitors List <span class=""></span></h2>
+
+          <div class="input-display">
+            <label for="visitors-search"><img src="" alt=""></label>
+            <input type="text" id="visitors-search" placeholder="Search" class="form-input">
+          </div>
+        </div>
+
+        <button class=""><img src="" alt=""> New Visitor</button>
+
+      </section>
+    </section>
+
+  </header>
+
+  <main class="visitors-body">
+    <table>
+      <thead>
+        <tr>
+          <td>Phone</td>
+          <td>Firstname</td>
+          <td>Lastname</td>
+          <td>Date Added</td>
+        </tr>
+      </thead>
+
+      <tbody *ngFor="let visitors of visitorsData">
+        <tr>
+          <td>{{visitors.firstName}}</td>
+          <td>{{visitors.lastName}}</td>
+          <td>{{visitors.phoneNumber}}</td>
+          <td>{{visitors.dateAdded}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+</div>

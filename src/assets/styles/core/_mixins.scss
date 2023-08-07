@@ -1,0 +1,82 @@
+/* FOR MEDIA QUERIES */
+$breakpoint-small: 480px;
+$breakpoint-medium-small: 600px;
+$breakpoint-medium: 750px;
+$breakpoint-large: 980px;
+$breakpoint-very-large: 1280px;
+$breakpoint-wide: 1440px;
+
+/* MIXINS FOR MEDIA QUERIES */
+@mixin screen($size, $type: max, $pixels: 300) {
+  @if $size== "tiny" {
+    @media screen and (max-width: 300px) {
+      @content;
+    }
+  }
+  @if $size== "small" {
+    @media screen and (max-width: $breakpoint-small) {
+      @content;
+    }
+  }
+  @if $size== "med-small" {
+    @media screen and (max-width: $breakpoint-medium-small) {
+      @content;
+    }
+  } @else if $size== "med" {
+    @media screen and (max-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if $size== "semi-middle" {
+    @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if $size== "middle" {
+    @media screen and (min-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if $size== "large" {
+    @media screen and (min-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if $size== "x-large" {
+    @media screen and (min-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if $size== "v-large" {
+    @media screen and (min-width: $breakpoint-very-large) {
+      @content;
+    }
+  } @else if $size == "wide" {
+    @media screen and (min-width: $breakpoint-wide) {
+      @content;
+    }
+  } @else if $size== "custom" {
+    // @media screen and ($type + -width : $pixels + px) {
+    // @content;
+    // }
+  }
+}
+
+/* RESPOND BASED ON MEDIA QUERY */
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: $breakpoint-medium-small) {
+      @content;
+    };
+  }
+  @if $breakpoint == tablet-port {
+    @media only screen and (max-width: 900px) {
+      @content;
+    };
+  }
+  @if $breakpoint == tablet-land {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    };
+  }
+  @if $breakpoint == wide-desktop {
+    @media only screen and (max-width: 1800px) {
+      @content;
+    };
+  }
+}
