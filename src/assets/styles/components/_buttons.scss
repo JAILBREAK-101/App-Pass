@@ -134,6 +134,12 @@
   &:disabled {
     cursor: not-allowed;
   }
+
+  &--gray {
+    background-color: transparent;
+    border: 1px solid $gray-1;
+    color: $gray-1;
+  }
 }
 
 .button-group, .button-link-group {

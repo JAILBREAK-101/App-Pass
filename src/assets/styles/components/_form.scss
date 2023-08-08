@@ -1,0 +1,119 @@
+@import '../core/variables';
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: calc(1.5em + .75rem + 2px);
+  padding: 1.6rem .75rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: $gray-2;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #D0C9D6;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: .35rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+  &--untouched {
+    background-color: $gray-6;
+
+    &:focus {
+      background-color: white !important;
+    }
+  }
+
+  &::placeholder {
+    color: $gray-4;
+  }
+}
+
+.form-control:focus {
+  color: $gray-4;
+  border: 1px solid $primary-color;
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-check-label {
+  --webkit-appearance: none;
+  appearance: none;
+  background-color: $gray-6;
+  width: 16px;
+  height: 16px;
+  border: 2px solid $gray-5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-text {
+    color: $gray-2;
+    line-height: 1;
+  }
+
+  &::before {
+    content: "✓";
+    width: 22px;
+    height: 22px;
+    transform: scale(0);
+    transition: 125ms transform ease-in-out;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &:checked {}
+
+  &:checked::before {
+    transform: scale(1);
+  }
+
+  &:focus {
+    outline-offset: max(2px, 0.15em);
+  }
+}
+
+.form-radio-label {
+  appearance: none;
+}
+
+.input-display {
+  margin-top: 5px;
+  padding: 1rem;
+
+  .name, label {
+    margin-top: 8px;
+    margin-bottom: 3px;
+    font-weight: 400;
+  }
+
+  .value {
+    margin-top: 3px;
+    margin-bottom: 4px;
+  }
+}
+
+.label-link-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.form-control-sm {
+  min-height: calc(1.5em + .5rem + 2px);
+  padding: .25rem .5rem;
+  font-size: .85rem;
+  border-radius: .2rem;
+}
+
+.form-control-lg {
+  //min-height: calc(1.5em + 1.5em)
+  padding: 1rem 0.5rem;
+  font-size: 1.4rem;
+}
