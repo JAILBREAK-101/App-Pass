@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {AppRouter} from "./app-router.module";
+import NavigationBar from "./residents/views/components/navigation/navigation.component";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -10,9 +12,9 @@ import {AppRouter} from "./app-router.module";
   ],
   imports: [
     BrowserModule,
-    AppRouter
+    AppRouter,
+    NavigationBar
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

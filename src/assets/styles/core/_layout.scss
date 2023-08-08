@@ -1,0 +1,57 @@
+/* Container for the whole application with viewport */
+@import './mixins';
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+/* Container for app content */
+.main-container {
+  flex-grow: 1;
+  padding-bottom: 1rem;
+}
+
+.container {
+  @include respond(phone) {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-justify-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.grid-space-between-3-1 {
+ display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.grid-space-between-4-1 {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.grid-space-between-5-1 {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+
+.grid-space-between-6-1 {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+}

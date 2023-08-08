@@ -1,0 +1,175 @@
+@import '../core/_variables.scss';
+
+body {
+  font-family: $primary-font;
+  line-height: 1.8;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+  margin-bottom: .4rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3.7rem;
+}
+
+h2 {
+  font-size: 2.93rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+p, li, td {
+  font-weight: 450;
+  font-size: 1.3rem;
+}
+
+.text {
+  &-primary {
+    color: $primary-color !important;
+  }
+
+  &-primary-deep {
+    color: $primary-color-very-deep !important;
+  }
+
+  &-muted {
+    color: $light-gray !important;
+  }
+
+  &-danger {
+    color: $red !important;
+  }
+
+  &-danger-deep {
+    color: $red-deep !important;
+  }
+
+  &-link {
+    color: $link !important;
+  }
+
+  &-normal {
+    color: $gray-3 !important;
+  }
+
+  &-header {
+    color: $gray-2 !important;
+  }
+}
+
+.small {
+  font-size: 11px;
+}
+
+.one-link-text, .collapsed-text {
+  text-overflow: ellipsis;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+.word-wrap-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.word-wrap {
+  word-wrap: break-word;
+}
+
+.fs-10 {
+  font-size: 10px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-19 {
+  font-size: 19px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-21 {
+  font-size: 21px;
+}
+
+.fs-22 {
+  font-size: 22px;
+}
+
+.fs-23 {
+  font-size: 23px;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.font-weight-light {
+  font-weight: 400 !important;
+}
+
+.font-weight-normal {
+  font-weight: 500 !important;
+}
+
+.font-weight-light-bold {
+  font-weight: 400 !important;
+}
+
+.font-weight-bold {
+  font-weight: 600 !important;
+}
+
+.font-weight-very-bold {
+  font-weight: 600 !important;
+}
+
+.font-weight-extra-bold {
+  font-weight: 700 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}

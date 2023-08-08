@@ -1,53 +1,79 @@
 <div class="visitors">
 
+  <section class="visitors-dashboard">
+    <div class="visitors-dashboard-data"></div>
+    <div class="visitors-dashboard-data"></div>
+    <div class="visitors-dashboard-data"></div>
+  </section>
+
   <header class="visitors-header">
 
-    <section class="visitors-dashboard">
+    <div class="visitors-header--left">
+      <h2 class="">Visitors <span class="text-muted font-weight-light">{{20}}</span></h2>
+      <div class="form-control-search">
+        <label class="label" for="visitor-search">
+          <img src="" alt="Search-Icon">
+        </label>
+        <input class="input" type="search" id="visitor-search" placeholder="Search">
+      </div>
+    </div>
 
-      <div class="visitors-dashboard-data"></div>
-      <div class="visitors-dashboard-data"></div>
-      <div class="visitors-dashboard-data"></div>
-
-    </section>
-
-    <section class="visitors-body">
-      <section class="visitors-body-header">
-
-        <div class="block-group">
-          <h2 class="visitors-body-text">Visitors List <span class=""></span></h2>
-
-          <div class="input-display">
-            <label for="visitors-search"><img src="" alt=""></label>
-            <input type="text" id="visitors-search" placeholder="Search" class="form-input">
-          </div>
-        </div>
-
-        <button class=""><img src="" alt=""> New Visitor</button>
-
-      </section>
-    </section>
-
+    <div class="visitors-header--right">
+      <button class="button--link button--has-icon">New Visitor <img src="" alt="Plus Button"></button>
+    </div>
   </header>
 
   <main class="visitors-body">
-    <table>
-      <thead>
-        <tr>
-          <td>Phone</td>
-          <td>Firstname</td>
-          <td>Lastname</td>
-          <td>Date Added</td>
-        </tr>
-      </thead>
+    <table class="visitors-body-table">
+      <section class="visitors-body-frequent-visitors-text">
+        <h2 class="visitors-body-frequent-visitors"><span class="visitors-body-frequent-visitors-text">Frequent Visitors</span></h2>
 
-      <tbody *ngFor="let visitors of visitorsData">
-        <tr>
-          <td>{{visitors.firstName}}</td>
-          <td>{{visitors.lastName}}</td>
-          <td>{{visitors.phoneNumber}}</td>
-          <td>{{visitors.dateAdded}}</td>
-        </tr>
-      </tbody>
+        <thead class="visitors-body-table--header">
+          <tr>
+            <td>Photo</td>
+            <td>Firstname</td>
+            <td>Lastname</td>
+            <td>Date Added</td>
+          </tr>
+
+          <!-- data representation from api-->
+        </thead>
+      </section>
+
+      <section class="visitors-body-frequent-visitors-text">
+        <h2 class="visitors-body-frequent-visitors"><span class="visitors-body-frequent-visitors-text">All Visitors</span></h2>
+
+        <thead class="visitors-body-table--header">
+          <tr>
+            <td>Photo</td>
+            <td>Firstname</td>
+            <td>Lastname</td>
+            <td>Date Added</td>
+          </tr>
+
+          <tr>
+            <!-- data representation from api-->
+          </tr>
+        </thead>
+      </section>
+
+<!--      <thead class="visitors-body-table&#45;&#45;header">-->
+<!--        <tr>-->
+<!--          <td>Photo</td>-->
+<!--          <td>Firstname</td>-->
+<!--          <td>Lastname</td>-->
+<!--          <td>Date Added</td>-->
+<!--        </tr>-->
+<!--      </thead>-->
+
+<!--      <tbody *ngFor="let visitors of visitorsData">-->
+<!--        <tr>-->
+<!--          <td>{{visitors.firstName}}</td>-->
+<!--          <td>{{visitors.lastName}}</td>-->
+<!--          <td>{{visitors.phoneNumber}}</td>-->
+<!--          <td>{{visitors.dateAdded}}</td>-->
+<!--        </tr>-->
+<!--      </tbody>-->
     </table>
   </main>
 

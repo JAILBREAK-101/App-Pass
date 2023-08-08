@@ -1,0 +1,42 @@
+.nav-icon {
+  width: 30px;
+  height: 30px;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+
+  &-profile-active {
+    fill: $primary-color;
+    background-color: $primary-color;
+  }
+
+  &-notifications-active {
+    fill: $primary-color;
+    background-color: $primary-color;
+  }
+
+  &-visitors {
+    fill: $primary-color;
+    background-color: $primary-color;
+  }
+}
+
+.icon-plus {
+  fill: $primary-color;
+  //background-color: $primary-color;
+}
+
+.icon-go-back {
+  fill: $primary-color;
+  //background-color: $primary-color;
+}
+
+.icon-sort {
+  fill: $primary-color;
+  //background-color: $primary-color;
+}
+
+.icon-filter {
+  fill: $primary-color;
+  //background-color: $primary-color;
+}

@@ -1,0 +1,165 @@
+.visitors {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: white;
+  min-height: 100%;
+
+  &-dashboard-data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: $gray-6;
+
+    &-data-field {
+      display: flex;
+      flex-direction: column;
+      width: 100px;
+      height: 100px;
+      background-color: $gray-2; // match good colors
+      border-radius: 5px;
+
+      &-value {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-header {
+    display: flex;
+    margin: 1.2rem;
+
+    &--left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &--right {
+      width: 100%;
+      flex-grow: 1;
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 1rem 2rem;
+    flex-grow: 1;
+    min-width: 100%;
+
+    &-table {
+      display: table;
+      vertical-align: center;
+
+      &--header {
+        text-align: center;
+        font-weight: 600;
+        color: $gray-1;
+        font-size: 1.2rem;
+      }
+
+      &--body {
+        text-align: center;
+        &-text {
+          color: $gray-3;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    &-frequent-visitors, .all-visitors {
+      background-color: $primary-color-faint-2;
+      margin: 0;
+      width: 100%;
+
+      &-text {
+        color: $gray-3;
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 0.9rem;
+        min-width: 100%;
+      }
+    }
+  }
+
+  &-detail {
+    margin: 1.2rem 2rem;
+
+    &--header {
+      display: flex;
+      flex-direction: column;
+
+      &-text {
+        font-size: 2.2rem;
+        padding: 0.2rem 1.2rem;
+        border-bottom: 1px solid $gray-5;
+      }
+
+      &-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        padding: 0.2rem 1.2rem;
+        border-bottom: 1px solid $gray-5;
+      }
+    }
+
+    &--button-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    &-history {
+      display: flex;
+      flex-direction: column;
+
+      &-header-text {
+        background-color: $primary-color-faint;
+        color: $gray-5;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+
+      &-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        padding: 0.2rem 1.2rem;
+        border-bottom: 1px solid $gray-5;
+      }
+    }
+  }
+
+  &-edit-button {
+    color: $white;
+    background-color: $green !important;
+    transition: 0.2s background-color ease-in-out;
+
+    &:hover {
+      background-color: $green-hover;
+    }
+  }
+}
+
+//.table-row {
+//
+//}
+//
+//.table-body {
+//
+//}
+
+.table-data {
+  border-bottom: 1px solid $light-gray;
+  padding: 1rem;
+  width: 100%;
+}

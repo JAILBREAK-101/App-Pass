@@ -4,7 +4,7 @@ import {residentComponents, ResidentRouter} from "./residents-router.module";
 
 @NgModule({
   declarations: [
-    residentComponents,
+    residentComponents
   ],
   imports: [
     ResidentRouter,

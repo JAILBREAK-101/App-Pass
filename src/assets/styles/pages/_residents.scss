@@ -1,0 +1,12 @@
+.residents {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 100%;
+  margin: 0;
+
+  @include screen(small) {
+    min-width: 100%;
+    margin: 0 1.5rem;
+  }
+}

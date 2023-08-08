@@ -1,0 +1,25 @@
+/* Animations */
+//@import './animations';
+
+/* Components */
+@import './components/buttons';
+@import './components/form';
+@import './components/icon';
+@import './components/modal';
+@import './components/nav';
+
+/* Core */
+@import './core/base';
+@import './core/layout';
+@import './core/mixins';
+@import './core/variables';
+
+/* Pages */
+@import './pages/notifications';
+@import './pages/profile';
+@import './pages/residents';
+@import './pages/visitors';
+
+/* Utilities */
+@import './utilities/spacing';
+@import './utilities/text';
