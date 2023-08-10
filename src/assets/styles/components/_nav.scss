@@ -5,7 +5,7 @@
 .nav-menu {
   position: fixed;
   top: 80%;
-  transform: translate(50%, -50%);
+  transform: translate(70%, 50%);
   display: flex;
   align-items: center;
   gap: 1.1rem;
@@ -35,11 +35,11 @@
     }
   }
 
-    &--img {
-      // for when routerLinkActive is activated on Nav Item
-      fill: $primary-color;
-    }
+  &--img {
+    // for when routerLinkActive is activated on Nav Item
+    fill: $primary-color;
   }
+}
 
 
 .lni {

@@ -120,6 +120,7 @@
     border: 0;
     font-weight: 600;
     font-size: 1.3rem;
+    cursor: pointer;
 
     @include screen(small) {
       width: inherit;
@@ -134,6 +135,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.2em;
   }
 
   &__icon {
@@ -154,7 +156,8 @@
   }
 }
 
-.button-group, .button-link-group {
+.button-group,
+.button-link-group {
   display: flex;
   justify-content: center;
   align-items: center;

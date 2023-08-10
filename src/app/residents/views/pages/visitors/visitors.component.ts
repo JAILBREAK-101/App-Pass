@@ -1,11 +1,11 @@
-import {Component, Input} from "@angular/core";
+import {Component} from "@angular/core";
 import {VisitorsListInterface} from "../../../../shared/interfaces/visitors";
 @Component({
   templateUrl: './visitors.component.html'
 })
 export class VisitorsComponent   {
 
-  visitorsData: VisitorsListInterface[] = [
+  visitorsList: VisitorsListInterface[] = [
     {
       id: 0,
       firstName: 'Adam',
@@ -31,4 +31,8 @@ export class VisitorsComponent   {
       image: ''
     },
   ]
+
+  visitors: number= this.visitorsList.length;
+
+  // visitorsData: string | [] = visitorsList.length == 0 ? "No Frequent Visitors" : null
 }

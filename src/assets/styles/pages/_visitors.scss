@@ -1,9 +1,10 @@
 .visitors {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.2rem;
   background-color: white;
   min-height: 100%;
+  margin: 0;
 
   &-dashboard-data {
     display: grid;
@@ -27,16 +28,20 @@
 
   &-header {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     margin: 1.2rem;
 
     &--left {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      gap: 0.4rem;
+      padding-left: 0.5rem;
     }
 
     &--right {
-      width: 100%;
+      margin-right: 2rem;
       flex-grow: 1;
     }
   }
@@ -48,42 +53,68 @@
     padding: 1rem 2rem;
     flex-grow: 1;
     min-width: 100%;
+  }
 
-    &-table {
-      display: table;
-      vertical-align: center;
+  &-table {
+    display: table;
+    width: 100%;
+    border-spacing: 0.5rem;
 
-      &--header {
-        text-align: center;
-        font-weight: 600;
-        color: $gray-1;
-        font-size: 1.2rem;
-      }
-
-      &--body {
-        text-align: center;
-        &-text {
-          color: $gray-3;
-          text-transform: capitalize;
-        }
-      }
+    &-head,
+    &-body {
+      display: flex;
+      flex-direction: column;
     }
 
-    &-frequent-visitors, .all-visitors {
-      background-color: $primary-color-faint-2;
-      margin: 0;
-      width: 100%;
+    &-row {
+      display: table-row;
+      transition: 0.5s border ease-in;
 
-      &-text {
+      &--head {
+        font-weight: 600;
+        font-size: 1.35rem;
+      }
+
+      &--head,
+      &--data {
+        display: table-cell;
+        max-width: 25%;
+        // padding: 1rem;
         color: $gray-3;
-        text-transform: uppercase;
-        text-align: left;
-        font-size: 0.9rem;
-        min-width: 100%;
+        text-transform: capitalize;
+      }
+
+      &--data {
+        color: $gray-2;
+      }
+
+      &:hover {
+        border: 1px solid $gray-6;
       }
     }
   }
 
+  .visitors-table-row--data:not(.visitors-table-row--data:last-child) {
+    border-bottom: 1px solid $gray-6;
+  }
+
+  &-frequent,
+  &-all {
+    margin: calc(100vw - 50%);
+
+    &-text {
+      width: 100%;
+      background-color: $primary-color-faint-2;
+      color: $gray-3;
+      text-transform: uppercase;
+      text-align: left;
+      font-size: 1.1rem;
+      padding: 1rem 0.2rem;
+    }
+  }
+
+
+  // Visitor Details Page
   &-detail {
     margin: 1.2rem 2rem;
 
@@ -143,23 +174,23 @@
     color: $white;
     background-color: $green !important;
     transition: 0.2s background-color ease-in-out;
+    cursor: pointer !important;
 
     &:hover {
       background-color: $green-hover;
+      fill: $green-hover;
     }
   }
 }
 
-//.table-row {
-//
-//}
-//
-//.table-body {
-//
-//}
+.new-visitor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%
+}
 
-.table-data {
-  border-bottom: 1px solid $light-gray;
-  padding: 1rem;
+// Page only button
+.add-new-visitor-button {
   width: 100%;
 }

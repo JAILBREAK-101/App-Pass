@@ -10,7 +10,8 @@ const routes: Routes = [
   },
   {
     path: 'residents',
-    loadChildren: () => import('./residents/residents.module').then(module => module.ResidentsModule)
+    loadChildren: () => import('./residents/residents.module').then(module => module.ResidentsModule),
+    // outlet: 'residents'
   },
   {
     path: '**',

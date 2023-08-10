@@ -34,5 +34,5 @@ export class ResidentRouter {}
 export const residentComponents = [
   VisitorsComponent,
   NotificationsComponent,
-  ProfileComponent
+  ProfileComponent,
 ]

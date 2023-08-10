@@ -1,5 +1,7 @@
 import {NgModule} from "@angular/core";
-import {NgFor} from "@angular/common";
+
+/* A Module is standalone by default */
+import {NgFor, NgOptimizedImage} from "@angular/common";
 import {residentComponents, ResidentRouter} from "./residents-router.module";
 
 @NgModule({
@@ -8,7 +10,8 @@ import {residentComponents, ResidentRouter} from "./residents-router.module";
   ],
   imports: [
     ResidentRouter,
-    NgFor
+    NgFor,
+    NgOptimizedImage
   ],
 })
 

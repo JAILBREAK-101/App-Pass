@@ -1,0 +1,21 @@
+.table {
+    display: table;
+    width: 100%;
+    border-spacing: 0.5rem;
+
+    &-cell {
+        padding: 1rem;
+        display: table-cell;
+        width: 25%;
+        border: 1px solid #FFF;
+    }
+}
+
+.table-row {
+    padding: 1rem;
+    display: table-row;
+}
+
+.table-data {
+    border-bottom: 1px solid $light-gray;
+}
