@@ -1,26 +1,37 @@
 <div class="visitors">
-    <button routerLink="/residents/visitors" class="button--has-icon button__icon">
-        <img ngSrc="assets/images/svg/go-back.svg" width="20" height="20" alt="Go-back-icon" />
-        Visitors
+    <button routerLink="/residents/visitors" class="button button--has-icon align-self-start">
+        <img ngSrc=" assets/images/svg/go-back.svg" width="20" height="20" alt="Go-back-icon" />
+        <span class="button-text text-primary">
+            Visitors
+        </span>
     </button>
 
-    <h2 class="text-normal font-weight-bold">New Visitor</h2>
+    <h2 class="text-normal mr-3 ml-3 font-weight-bold">New Visitor</h2>
 
     <section class="new-visitor-form">
-        <form>
+        <form class="form-layout">
             <div class="form-group">
                 <label class="text-normal" for="name">Name</label>
-                <input id="name" class="form-control" placeholder="Enter Visitors' Name" />
+                <input type="text" id="name" class="form-control form-control--untouched"
+                    placeholder="Enter Visitors' Name" />
             </div>
 
             <div class="form-group">
-                <label class="text-normal" for="number">Phone number</label>
-                <input id="number" class="form-control" placeholder="Enter Visitors' Phone Number" />
+                <div class="label-text-group">
+                    <label class="text-normal" for="number">Phone number</label>
+                    <span class="text-muted">Optional</span>
+                </div>
+                <input id="number" type="tel" class="form-control form-control--untouched"
+                    placeholder="Enter Visitors' Phone Number" />
             </div>
 
-            <label for="generate-passcode" class="form-check-label">
-                <input type="checkbox" id="generate-passcode" name="generate-passcode" [value]="" />
-            </label>
+            <div class="flex-direction-row">
+                <input type="checkbox" id="generate-passcode" name="generate-passcode" class="mr-2"
+                    value="generate-passcode" />
+                <label for="generate-passcode" class="text-normal cursor">Generate Passcode now</label>
+            </div>
+
+            <button (click)="null" class="button button--success">Done</button>
         </form>
     </section>
 </div>

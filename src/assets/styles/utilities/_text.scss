@@ -7,7 +7,12 @@ body {
   font-size: 1.3rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2em;
   margin-bottom: .4rem;
   font-weight: 600;
@@ -37,7 +42,9 @@ h6 {
   font-size: 1.2rem;
 }
 
-p, li, td {
+p,
+li,
+td {
   font-weight: 450;
   font-size: 1.3rem;
 }
@@ -80,7 +87,8 @@ p, li, td {
   font-size: 11px;
 }
 
-.one-link-text, .collapsed-text {
+.one-link-text,
+.collapsed-text {
   text-overflow: ellipsis;
   margin: 0;
   white-space: nowrap;
@@ -170,6 +178,11 @@ a {
   text-decoration: none;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
+}
+
+.cursor {
+  cursor: pointer;
 }

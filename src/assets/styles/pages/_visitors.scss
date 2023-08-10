@@ -43,6 +43,8 @@
     &--right {
       margin-right: 2rem;
       flex-grow: 1;
+      display: flex;
+      align-items: flex-start;
     }
   }
 
@@ -51,6 +53,7 @@
     flex-direction: column;
     margin: 0;
     padding: 1rem 2rem;
+    align-items: flex-start;
     flex-grow: 1;
     min-width: 100%;
   }
@@ -58,17 +61,22 @@
   &-table {
     display: table;
     width: 100%;
-    border-spacing: 0.5rem;
+    border-spacing: 0.5rem 1.5rem;
 
     &-head,
     &-body {
       display: flex;
       flex-direction: column;
+      width: 600px;
+      max-width: 100%;
     }
 
     &-row {
       display: table-row;
       transition: 0.5s border ease-in;
+      width: 100%;
+      padding: 1.5rem 0;
+      cursor: pointer;
 
       &--head {
         font-weight: 600;
@@ -89,13 +97,13 @@
       }
 
       &:hover {
-        border: 1px solid $gray-6;
+        border: 1px solid $gray-2;
       }
     }
   }
 
-  .visitors-table-row--data:not(.visitors-table-row--data:last-child) {
-    border-bottom: 1px solid $gray-6;
+  .visitors-table-row:not(.visitors-table-row:last-of-type) {
+    border-bottom: 1px solid $gray;
   }
 
   &-frequent,
@@ -151,9 +159,10 @@
       flex-direction: column;
 
       &-header-text {
-        background-color: $primary-color-faint;
-        color: $gray-5;
+        background-color: $primary-color-faint-2;
+        color: $gray-3;
         width: 100%;
+        letter-spacing: 3px;
         text-transform: uppercase;
         font-size: 0.9rem;
       }
@@ -186,8 +195,8 @@
 .new-visitor-form {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  width: 100%
+  // gap: 2rem;
+  margin: 1.2rem;
 }
 
 // Page only button

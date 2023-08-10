@@ -1,3 +1,41 @@
 <div class="profile">
 
+    <section class="profile-header">
+        <h2 class="profile-header-text"></h2>
+        <p class="profile-header-address"></p>
+    </section>
+
+    <section class="profile-data">
+        <div class="profile-data-block">
+            <span class="profile-data-block--value"></span>
+            <span class="profile-data-block--key"></span>
+        </div>
+
+        <div class="profile-data-block">
+            <span class="profile-data-block--value"></span>
+            <span class="profile-data-block--key"></span>
+        </div>
+    </section>
+
+    <section class="profile-details">
+        <div class="profile-details-block">
+            <span class="text-header">Phone number: </span>
+            <span class="text-normal"></span>
+        </div>
+        <div class="profile-details-block">
+            <span class="text-header">Email: </span>
+            <span class="text-normal"></span>
+        </div>
+        <div class="profile-details-block">
+            <span class="text-header">House Address: </span>
+            <span class="text-normal"></span>
+        </div>
+    </section>
+
+    <div class="button-group">
+        <button routerLink="/residents/profile/edit" class="button button--primary button--outline">Edit
+            Details</button>
+
+        <button class="button button--danger outline" (click)="null">Log out</button>
+    </div>
 </div>

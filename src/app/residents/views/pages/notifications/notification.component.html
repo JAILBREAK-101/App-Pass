@@ -1,3 +1,23 @@
 <div class="notifications">
+    <section class="notifications-header">
+        <h2 class="text-normal font-weight-bold">Notifications</h2>
 
+        <div class="form-control-search">
+            <label class="label" for="notification-search">
+                <img ngSrc="assets/images/svg/search.svg" width="20" height="20" alt="Search-Icon">
+            </label>
+            <input class="input" type="search" id="notification-search" placeholder="Search">
+        </div>
+    </section>
+
+    <section class="notifications-datalist">
+        <p class="text-center"></p>
+
+        <ng-template ngFor="">
+            <div class="notifications-datalist-cell">
+                <p class="notifications-datalist-cell-message"></p>
+                <p class="notifications-datalist-cell-timestamp"></p>
+            </div>
+        </ng-template>
+    </section>
 </div>

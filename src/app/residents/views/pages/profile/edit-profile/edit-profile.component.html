@@ -1,0 +1,27 @@
+<div class="profile">
+    <button routerLink="/residents/profile" class="button button--has-icon align-self-start">
+        <img ngSrc=" assets/images/svg/go-back.svg" width="20" height="20" alt="Go-back-icon" />
+        <span class="button-text text-primary">
+            Profile
+        </span>
+    </button>
+
+    <h2 class="text-normal mr-3 ml-3 font-weight-bold">Edit Profile</h2>
+
+    <section class="new-visitor-form">
+        <form class="form-layout">
+            <div class="form-group">
+                <label for="name" class="text-normal">Name</label>
+                <input type="text" class="form-control form-control-untouched" placeholder="Enter your new Name">
+            </div>
+
+            <div class="form-group">
+                <label for="number" class="text-normal"></label>
+                <input type="text" class="form-control form-control--untouched"
+                    placeholder="Enter your new Phone Number">
+            </div>
+
+            <button (click)="null" class="button button--success">Done</button>
+        </form>
+    </section>
+</div>

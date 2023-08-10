@@ -1,0 +1,51 @@
+.notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: white;
+    min-height: 100%;
+    margin: 1.4rem 1.2rem;
+
+    &-header {
+        width: 100;
+    }
+
+    &-datalist {
+        display: flex;
+        flex-direction: column;
+
+        &-cell {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            border-top: 1px solid $gray-5;
+            border-bottom: 1px solid $gray-5;
+
+
+            &-message {
+                color: $gray-2;
+                width: 100%;
+            }
+
+            &-timestamp {
+                color: $gray-3;
+                width: 100%;
+                text-transform: uppercase;
+            }
+        }
+
+        &--checked-in {
+            color: $green !important;
+        }
+
+        &--checked-out {
+            color: $red !important;
+        }
+
+        &--checked-blacklisted {
+            color: inherit;
+        }
+    }
+
+}

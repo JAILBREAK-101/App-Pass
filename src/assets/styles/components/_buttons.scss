@@ -8,7 +8,7 @@
   -webkit-box-sizing: border-box;
   border: none;
   cursor: pointer;
-  display: inline-block;
+  display: inline;
   font-family: $primary-font;
   font-size: 14px;
   font-weight: 500;
@@ -22,7 +22,7 @@
   transition-timing-function: ease-in-out;
   user-select: none;
   height: 40px;
-  border-radius: 8px;
+  border-radius: 5px;
   text-align: center;
   cursor: pointer;
 
@@ -30,8 +30,8 @@
     width: 100%;
   }
 
-  --primary {
-    background-color: $primary-color;
+  &--primary {
+    background-color: $primary-color !important;
     color: white;
 
     &:hover {
@@ -53,8 +53,9 @@
     }
 
     &.button--outline {
-      border: 1px solid rgba($color: $primary-color, $alpha: 0.5);
-      color: $primary-color;
+      background-color: white;
+      border: 1px solid $primary-color !important;
+      color: $primary-color !important;
 
       &:active {
         background: transparent;
@@ -68,7 +69,7 @@
     }
   }
 
-  --danger {
+  &--danger {
     background-color: $red;
     color: white;
 
@@ -90,9 +91,15 @@
       background-color: $red-deep;
       color: white;
     }
+
+    &.outline {
+      background-color: white;
+      border: 2px solid $red;
+      color: $red;
+    }
   }
 
-  --success {
+  &--success {
     background-color: $green;
     color: white;
 
@@ -138,7 +145,11 @@
     gap: 0.2em;
   }
 
-  &__icon {
+  &-text {
+    font-size: 1.4rem;
+  }
+
+  &-icon {
     display: inline-flex;
     justify-content: center;
     align-items: center;

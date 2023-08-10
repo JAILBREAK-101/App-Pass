@@ -1,7 +1,7 @@
 <div class="visitors">
-    <button routerLink="/residents/visitors" class="button--has-icon button__icon">
+    <button routerLink="/residents/visitors" class="button button--has-icon align-self-start">
         <img ngSrc="assets/images/svg/go-back.svg" width="20" height="20" alt="Go-back-icon" />
-        Visitors
+        <span class="button-text text-primary">Visitors</span>
     </button>
 
     <section class="visitors-detail">
@@ -16,8 +16,8 @@
         </section>
 
         <div class="visitors-detail--button-group">
-            <button class="button--primary">Generate Passcode</button>
-            <button class="button button--outline">Edit Details</button>
+            <button (click)="null" class="button button--primary">Generate Passcode</button>
+            <button (click)="null" class="button button--primary button--outline">Edit Details</button>
         </div>
 
         <section class="visitors-detail-history">

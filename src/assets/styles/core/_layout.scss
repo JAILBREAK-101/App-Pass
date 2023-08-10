@@ -21,6 +21,14 @@
   }
 }
 
+.align-self-start {
+  align-self: flex-start;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
 .flex-space-between {
   display: flex;
   justify-content: space-between;
@@ -37,7 +45,7 @@
 }
 
 .grid-space-between-3-1 {
- display: grid;
+  display: grid;
   grid-template-columns: 3fr 1fr;
 }
 

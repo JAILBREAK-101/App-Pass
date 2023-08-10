@@ -9,7 +9,7 @@
   <header class="visitors-header">
 
     <div class="visitors-header--left">
-      <h2 class="">Visitors <span class="text-muted font-weight-light">{{visitors}}</span></h2>
+      <h2 class="">Visitors <span class="text-muted font-weight-light">{{null}}</span></h2>
       <div class="form-control-search">
         <label class="label" for="visitor-search">
           <img ngSrc="assets/images/svg/search.svg" width="20" height="20" alt="Search-Icon">
@@ -26,68 +26,53 @@
 
   <main class="visitors-body">
 
-    <div class="visitors-table">
+    <div class="visitors-table table">
 
       <div class="visitors-table-frequent">
         <p class="visitors-body-frequent-text">Frequent
           Visitors</p>
       </div>
 
-      <div class="visitors-table-head">
+      <div class="visitors-table-row table-head">
 
-        <div class="visitors-table-row">
-
-          <div class="visitors-table-row--head">Photo</div>
-          <div class="visitors-table-row--head">Firstname</div>
-          <div class="visitors-table-row--head">Lastname</div>
-          <div class="visitors-table-row--head">Date Added</div>
-        </div>
-
+        <div class="visitors-table-row--head">Photo</div>
+        <div class="visitors-table-row--head">Firstname</div>
+        <div class="visitors-table-row--head">Lastname</div>
+        <div class="visitors-table-row--head">Date Added</div>
       </div>
 
 
-      <div class="visitors-table-body">
+      <!-- <div class="visitors-table-row table-body" routerLink="" *ngFor="let visitors of visitorsList">
 
-        <div class="visitors-table-row" routerLink="" *ngFor="let visitors of visitorsList">
-
-          <div class="visitors-table-row--data">{{visitors.id}}</div>
-          <div class="visitors-table-row--data">{{visitors.firstName}}</div>
-          <div class="visitors-table-row--data">{{visitors.lastName}}</div>
-          <div class="visitors-table-row--data">{{visitors.dateAdded}}</div>
-        </div>
-      </div>
+        <div class="visitors-table-row--data">{{visitors.id}}</div>
+        <div class="visitors-table-row--data">{{visitors.firstName}}</div>
+        <div class="visitors-table-row--data">{{visitors.lastName}}</div>
+        <div class="visitors-table-row--data">{{visitors.dateAdded}}</div>
+      </div> -->
     </div>
 
-
-    <div class="visitors-table">
+    <div class="visitors-table table">
 
       <div class="visitors-body-all">
         <p class="visitors-body-all-text">All
           Visitors</p>
       </div>
 
-      <div class="visitors-table-head">
-
-        <div class="visitors-table-row">
-          <div class="visitors-table-row--head">Photo</div>
-          <div class="visitors-table-row--head">Firstname</div>
-          <div class="visitors-table-row--head">Lastname</div>
-          <div class="visitors-table-row--head">Date Added</div>
-        </div>
-
+      <div class="visitors-table-row table-head">
+        <div class="visitors-table-row--head">Photo</div>
+        <div class="visitors-table-row--head">Firstname</div>
+        <div class="visitors-table-row--head">Lastname</div>
+        <div class="visitors-table-row--head">Date Added</div>
       </div>
 
-      <div class="visitors-table-body">
+      <!-- <div class="visitors-table-row table-body" [routerLink]="" *ngFor="let visitors of visitorsList">
 
-        <!-- 
-      <div class="visitors-table-row" *ngFor="">
-        <div class="visitors-table-row--data"></div>
-        <div class="visitors-table-row--data"></div>
-        <div class="visitors-table-row--data"></div>
-        <div class="visitors-table-row--data"></div>
-      </div>
-    -->
-      </div>
+        <div class="visitors-table-row--data">{{visitors.id}}</div>
+        <div class="visitors-table-row--data">{{visitors.firstName}}</div>
+        <div class="visitors-table-row--data">{{visitors.lastName}}</div>
+        <div class="visitors-table-row--data">{{visitors.dateAdded}}</div>
+      </div> -->
+
     </div>
 
 

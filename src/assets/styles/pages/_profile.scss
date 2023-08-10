@@ -1,0 +1,61 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: white;
+    min-height: 100%;
+    margin: 1.4rem 1.2rem;
+
+    &-header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        line-height: 1;
+
+        &-text {
+            font-weight: 600;
+            color: $gray-2;
+            text-transform: capitalize;
+        }
+
+        &-address {
+            font-weight: 400;
+            color: $gray-4;
+            font-size: 1.1rem
+        }
+    }
+
+    &-data {
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &-block {
+            display: flex;
+            gap: 0.4rem;
+            align-items: inherit;
+        }
+
+        &--key {
+            font-size: 0.6rem;
+            color: $gray-5;
+            text-transform: capitalize;
+            align-self: flex-end;
+        }
+
+        &--value {
+            color: $green;
+            font-size: 1.5rem;
+        }
+    }
+
+    &-details & {
+        gap: 1.2rem;
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
