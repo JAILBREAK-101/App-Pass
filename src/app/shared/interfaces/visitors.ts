@@ -1,14 +1,15 @@
 export interface VisitorsListInterface {
-  id: number
+  id?: number,
   firstName: string,
-  image: string,
+  image?: string,
   lastName: string,
   phoneNumber: number,
   dateAdded: string | number,
+  info?: VisitorDetail
 }
 
 export interface VisitorDetail {
-  phoneNumber: number,
+  phoneNumber?: number,
   amountOfVisits: number,
   status: 'allowed' | 'blacklisted' | null
 }

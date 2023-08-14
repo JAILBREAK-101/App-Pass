@@ -4,13 +4,16 @@
 
 .nav-menu {
   position: fixed;
-  top: 80%;
-  transform: translate(70%, 50%);
+  top: 85%;
+  left: 40%;
+  // z-index: 2;
+  // transform: translate(100%, 50%);
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1.1rem;
+  gap: 1.4rem;
   background-color: $white;
-  padding: 0.4rem 2rem;
+  padding: 0.1rem 1.2rem;
   border: 1px solid $gray-6;
   border-radius: 25px;
   box-shadow: 0 0 5px $gray-3;
@@ -23,8 +26,8 @@
   cursor: pointer;
 
   &--img {
-    object-fit: cover;
-    width: 30px;
+    object-fit: scale-down;
+    width: 20px;
 
     &:focus {
       fill: $primary-color;

@@ -9,11 +9,14 @@
     <h2 class="text-normal mr-3 ml-3 font-weight-bold">New Visitor</h2>
 
     <section class="new-visitor-form">
-        <form class="form-layout">
+        <form class="form-layout" (ngSubmit)="onSubmitForm()" [formGroup]="newVisitorForm">
             <div class="form-group">
                 <label class="text-normal" for="name">Name</label>
-                <input type="text" id="name" class="form-control form-control--untouched"
+                <input type="text" id="name" class="form-control form-control--untouched" formControlName="name"
                     placeholder="Enter Visitors' Name" />
+
+                <span *ngIf="newVisitorForm.controls['name'].dirty && newVisitorForm.hasError('required', 'name')"
+                    class="form-error">Name is required</span>
             </div>
 
             <div class="form-group">
@@ -21,17 +24,21 @@
                     <label class="text-normal" for="number">Phone number</label>
                     <span class="text-muted">Optional</span>
                 </div>
-                <input id="number" type="tel" class="form-control form-control--untouched"
+                <input id="number" type="tel" formControlName="phoneNumber" class="form-control form-control--untouched"
                     placeholder="Enter Visitors' Phone Number" />
             </div>
 
             <div class="flex-direction-row">
                 <input type="checkbox" id="generate-passcode" name="generate-passcode" class="mr-2"
-                    value="generate-passcode" />
+                    value="generate-passcode" (click)="toggleGeneratePasscode()" />
                 <label for="generate-passcode" class="text-normal cursor">Generate Passcode now</label>
+
+                <span
+                    *ngIf="newVisitorForm.controls['generatePasscode'].dirty && newVisitorForm.hasError('required', 'generatePasscode')"
+                    class="form-error">Checkbox is required</span>
             </div>
 
-            <button (click)="null" class="button button--success">Done</button>
+            <button class="button button--success">Done</button>
         </form>
     </section>
 </div>

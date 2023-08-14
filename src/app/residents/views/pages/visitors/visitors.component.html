@@ -19,8 +19,9 @@
     </div>
 
     <div class="visitors-header--right">
-      <button class="button--link button--has-icon add-new-visitor-button flex-justify-end">New Visitor <img
-          ngSrc="assets/images/svg/add-new-visitor.svg" width="20" height="20" alt="Plus Button"></button>
+      <button routerLink="/residents/new-visitor"
+        class="button--link button--has-icon add-new-visitor-button flex-justify-end">New Visitor <img
+          ngSrc="assets/images/svg/add-new-visitor.svg" width="20" priority="" height="20" alt="Plus Button"></button>
     </div>
   </header>
 
@@ -28,7 +29,7 @@
 
     <div class="visitors-table table">
 
-      <div class="visitors-table-frequent">
+      <div class="visitors-body-frequent">
         <p class="visitors-body-frequent-text">Frequent
           Visitors</p>
       </div>
@@ -42,13 +43,12 @@
       </div>
 
 
-      <!-- <div class="visitors-table-row table-body" routerLink="" *ngFor="let visitors of visitorsList">
+      <div class="visitors-table-row table-body" routerLink="" *ngFor="let visitors of visitorList">
 
-        <div class="visitors-table-row--data">{{visitors.id}}</div>
         <div class="visitors-table-row--data">{{visitors.firstName}}</div>
         <div class="visitors-table-row--data">{{visitors.lastName}}</div>
         <div class="visitors-table-row--data">{{visitors.dateAdded}}</div>
-      </div> -->
+      </div>
     </div>
 
     <div class="visitors-table table">
@@ -65,34 +65,15 @@
         <div class="visitors-table-row--head">Date Added</div>
       </div>
 
-      <!-- <div class="visitors-table-row table-body" [routerLink]="" *ngFor="let visitors of visitorsList">
+      <div class="visitors-table-row table-body" [routerLink]="['/residents/visitors-details', visitors.firstName]"
+        *ngFor="let visitors of visitorList">
 
-        <div class="visitors-table-row--data">{{visitors.id}}</div>
         <div class="visitors-table-row--data">{{visitors.firstName}}</div>
         <div class="visitors-table-row--data">{{visitors.lastName}}</div>
         <div class="visitors-table-row--data">{{visitors.dateAdded}}</div>
-      </div> -->
+      </div>
 
     </div>
-
-
-    <!--      <thead class="visitors-body-table&#45;&#45;header">-->
-    <!--        <tr>-->
-    <!--          <td>Photo</td>-->
-    <!--          <td>Firstname</td>-->
-    <!--          <td>Lastname</td>-->
-    <!--          <td>Date Added</td>-->
-    <!--        </tr>-->
-    <!--      </thead>-->
-
-    <!--      <tbody *ngFor="let visitors of visitorsData">-->
-    <!--        <tr>-->
-    <!--          <td>{{visitors.firstName}}</td>-->
-    <!--          <td>{{visitors.lastName}}</td>-->
-    <!--          <td>{{visitors.phoneNumber}}</td>-->
-    <!--          <td>{{visitors.dateAdded}}</td>-->
-    <!--        </tr>-->
-    <!--      </tbody>-->
   </main>
 
 </div>

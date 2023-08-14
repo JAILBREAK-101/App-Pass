@@ -12,7 +12,7 @@ import { VisitorPasscodeModal } from "./views/components/modals/visitor-passcode
 const routes: Routes = [
   {
     path: 'visitors',
-    component: VisitorsComponent
+    component: VisitorsComponent,
   },
   {
     path: 'notifications',
@@ -21,21 +21,18 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
-    children: [
-      {
-        path: 'edit', loadComponent: () => EditProfileComponent
-      }
-    ]
   },
-
   {
     path: 'new-visitor',
     component: NewVisitorComponent
   },
   {
-    path: 'visitors-details/:visitor',
+    path: 'visitor-details/:visitor',
     component: VisitorDetailsComponent
   },
+  {
+    path: 'edit', component: EditProfileComponent
+  }
 ]
 
 @NgModule({

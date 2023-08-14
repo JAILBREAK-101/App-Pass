@@ -9,16 +9,24 @@
     <h2 class="text-normal mr-3 ml-3 font-weight-bold">Edit Profile</h2>
 
     <section class="new-visitor-form">
-        <form class="form-layout">
+        <form class="form-layout" [formGroup]="editProfileForm">
             <div class="form-group">
                 <label for="name" class="text-normal">Name</label>
-                <input type="text" class="form-control form-control-untouched" placeholder="Enter your new Name">
+                <input type="text" class="form-control form-control-untouched" placeholder="Enter your new Name"
+                    formControlName="name">
+
+                <span *ngIf="editProfileForm.controls['name'].dirty && editProfileForm.hasError('required', 'name')"
+                    class="form-error">Visitor's name is required</span>
             </div>
 
             <div class="form-group">
-                <label for="number" class="text-normal"></label>
+                <label for="number" class="text-normal">Phone Number</label>
                 <input type="text" class="form-control form-control--untouched"
-                    placeholder="Enter your new Phone Number">
+                    placeholder="Enter your new Phone Number" formControlName="phoneNumber">
+
+                <span
+                    *ngIf="editProfileForm.controls['phoneNumber'].dirty && editProfileForm.hasError('required', 'phoneNumber')"
+                    class="form-error">Phone Number is required</span>
             </div>
 
             <button (click)="null" class="button button--success">Done</button>

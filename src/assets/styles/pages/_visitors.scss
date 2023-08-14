@@ -42,7 +42,7 @@
 
     &--right {
       margin-right: 2rem;
-      flex-grow: 1;
+      // flex-grow: 1;
       display: flex;
       align-items: flex-start;
     }
@@ -56,6 +56,21 @@
     align-items: flex-start;
     flex-grow: 1;
     min-width: 100%;
+
+    &-frequent,
+    &-all {
+      min-width: 100%;
+      background-color: $primary-color-faint-2;
+      margin: 0;
+
+      &-text {
+        color: $gray-3;
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 1.1rem;
+        padding: 1rem 0.2rem;
+      }
+    }
   }
 
   &-table {
@@ -76,7 +91,6 @@
       transition: 0.5s border ease-in;
       width: 100%;
       padding: 1.5rem 0;
-      cursor: pointer;
 
       &--head {
         font-weight: 600;
@@ -102,25 +116,13 @@
     }
   }
 
+  .visitors-table-row:not(.visitors-table-row:nth-of-type(1)) {
+    cursor: pointer;
+  }
+
   .visitors-table-row:not(.visitors-table-row:last-of-type) {
     border-bottom: 1px solid $gray;
   }
-
-  &-frequent,
-  &-all {
-    margin: calc(100vw - 50%);
-
-    &-text {
-      width: 100%;
-      background-color: $primary-color-faint-2;
-      color: $gray-3;
-      text-transform: uppercase;
-      text-align: left;
-      font-size: 1.1rem;
-      padding: 1rem 0.2rem;
-    }
-  }
-
 
   // Visitor Details Page
   &-detail {
