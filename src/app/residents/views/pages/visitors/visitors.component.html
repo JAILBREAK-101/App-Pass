@@ -1,9 +1,25 @@
 <div class="visitors">
 
   <section class="visitors-dashboard">
-    <div class="visitors-dashboard-data"></div>
-    <div class="visitors-dashboard-data"></div>
-    <div class="visitors-dashboard-data"></div>
+    <div class="visitors-dashboard-data">
+      <div class="visitors-dashboard-data_details">
+        <div class="visitors-dashboard-data-field">
+          <span class="visitors-dashboard-data-value">1 Visitor</span>
+        </div>
+      </div>
+    </div>
+    <div class="visitors-dashboard-data">
+      <div class="visitors-dashboard-data-field">
+        <span class="visitors-dashboard-data-value">2 Residents</span>
+      </div>
+    </div>
+    <div class="visitors-dashboard-data">
+      <div class="visitors-dashboard-data_details">
+        <div class="visitors-dashboard-data-field">
+          <span class="visitors-dashboard-data-value">11 Total Visits</span>
+        </div>
+      </div>
+    </div>
   </section>
 
   <header class="visitors-header">
@@ -12,7 +28,8 @@
       <h2 class="">Visitors <span class="text-muted font-weight-light">{{null}}</span></h2>
       <div class="form-control-search">
         <label class="label" for="visitor-search">
-          <img ngSrc="assets/images/svg/search.svg" width="20" height="20" alt="Search-Icon">
+          <img ngSrc="assets/images/svg/search.svg" width="30" height="30" style="width: auto; height: auto"
+            alt="Search-Icon">
         </label>
         <input class="input" type="search" id="visitor-search" placeholder="Search">
       </div>
@@ -21,7 +38,8 @@
     <div class="visitors-header--right">
       <button routerLink="/residents/new-visitor"
         class="button--link button--has-icon add-new-visitor-button flex-justify-end">New Visitor <img
-          ngSrc="assets/images/svg/add-new-visitor.svg" width="20" priority="" height="20" alt="Plus Button"></button>
+          ngSrc="assets/images/svg/add-new-visitor.svg" width="30" height="30" style="width: auto; height: auto"
+          alt="Plus Button"></button>
     </div>
   </header>
 
