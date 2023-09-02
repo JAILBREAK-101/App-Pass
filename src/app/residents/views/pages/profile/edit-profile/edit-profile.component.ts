@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder } from "@angular/forms";
-import { Validate } from "src/app/shared/helpers/validators";
+import { Validate } from "src/app/residents/shared/helpers/validators";
+import { ProfileService } from "../profile.service";
 
 @Component({
     templateUrl: './edit-profile.component.html'
@@ -10,7 +11,7 @@ export class EditProfileComponent implements OnInit {
 
     editProfileForm!: FormGroup
 
-    constructor(private editProfileFormBuilder: FormBuilder) { }
+    constructor(private editProfileFormBuilder: FormBuilder, private editProfileService: ProfileService) { }
 
     ngOnInit(): void {
         this.editProfileForm = this.editProfileFormBuilder.group({
@@ -19,6 +20,7 @@ export class EditProfileComponent implements OnInit {
         })
     }
 
-    // Routing with Page data
-    @Input() routeParams = ''
+    updateProfile() {
+        this.editProfileService.updateResidentProfileData()
+    }
 }

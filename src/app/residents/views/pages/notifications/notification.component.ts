@@ -4,4 +4,6 @@ import { Component } from "@angular/core";
     templateUrl: './notification.component.html'
 })
 
-export class NotificationsComponent { }
+export class NotificationsComponent { 
+    
+}

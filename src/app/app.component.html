@@ -1,8 +1,13 @@
 <main class="app-container">
 
-  <div class="residents">
-    <router-outlet></router-outlet>
-    <nav-bar></nav-bar>
-  </div>
+  <!-- Outlet for the auth pages -->
+  <!-- <router-outlet name="auth"></router-outlet> -->
+
+  <!-- Outlet for the resident pages -->
+  <router-outlet>
+    <div class="residents">
+      <nav-bar></nav-bar>
+    </div>
+  </router-outlet>
 
 </main>

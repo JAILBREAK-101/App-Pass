@@ -1,6 +1,7 @@
 import { Component, OnInit, } from '@angular/core';
 import {FormGroup, FormBuilder} from '@angular/forms';
-import { Validate } from 'src/app/shared/helpers/validators';
+import { Validate } from 'src/app/residents/shared/helpers/validators';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { Validate } from 'src/app/shared/helpers/validators';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup
 
-  constructor(private loginFormBuilder: FormBuilder) {}
+  constructor(private loginFormBuilder: FormBuilder, private loginService: AuthService) {}
 
   inputType: string = 'password'
   isInputTypeText: boolean = false
@@ -29,6 +30,6 @@ export class LoginComponent implements OnInit {
   }
 
   onLoginUser() {
-      
+      this.loginService.loginUser()
   }
 }

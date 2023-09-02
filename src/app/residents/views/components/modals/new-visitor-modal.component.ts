@@ -6,7 +6,7 @@ import { Component, EventEmitter, Output } from "@angular/core";
             <button (click)="null" class="button text-primary align-self-end">Dismiss</button>
 
             <div class="modal-card">
-                <img ng="assets/images/svg/Successful.svg" alt="successfully-added-image" width="50" height="50" class='modal-card-image'>
+                <img ng="assets/images/svg/Successful.svg" alt="successfully-added-image" width="auto" height="auto" class='modal-card-image'>
 
                 <p class='modal-card-text'>You have successfully added a new visitor</p> 
             </div>

@@ -6,17 +6,30 @@
   min-height: 100%;
   margin: 0;
 
-  &-dashboard-data {
+  &-dashboard {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-color: $gray-6;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    &-data {
+      background-color: $gray-6;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     &-data-field {
       display: flex;
       flex-direction: column;
       width: 100px;
       height: 100px;
-      background-color: $gray-2; // match good colors
+      align-items: center;
+      justify-content: center;
+      background-color: transparent; // match good colors
       border-radius: 5px;
 
       &-value {

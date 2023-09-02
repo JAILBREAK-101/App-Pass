@@ -1,10 +1,12 @@
-import { Injectable } from "@angular/core";
+import {Injectable} from "@angular/core"
 
-@Injectable()
+@Injectable({
+    providedIn: "root"
+})
 
 export class NotificationService {
     constructor() {}
-
+    
     setNewNotificaton() {}
 
     retrieveNotification() {}

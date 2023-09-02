@@ -1,6 +1,7 @@
 <div class="profile">
     <button routerLink="/residents/profile" class="button button--has-icon align-self-start">
-        <img ngSrc=" assets/images/svg/go-back.svg" width="20" height="20" alt="Go-back-icon" />
+        <img ngSrc=" assets/images/svg/go-back.svg" width="30" height="30" style="width: auto; height: auto"
+            alt="Go-back-icon" />
         <span class="button-text text-primary">
             Profile
         </span>
@@ -29,7 +30,7 @@
                     class="form-error">Phone Number is required</span>
             </div>
 
-            <button (click)="null" class="button button--success">Done</button>
+            <button (click)="updateProfile()" class="button button--success">Done</button>
         </form>
     </section>
 </div>

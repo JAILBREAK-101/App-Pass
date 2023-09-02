@@ -1,5 +1,6 @@
 import {NgModule} from "@angular/core";
 import {ReactiveFormsModule} from "@angular/forms";
+// import {HTTPClientModule}
 /* A Module is standalone by default */
 import {NgFor, NgIf, NgOptimizedImage} from "@angular/common";
 import {residentComponents, ResidentRouter} from "./residents-router.module";
@@ -17,7 +18,7 @@ import { VisitorsService } from "./views/pages/visitors/visitors.service";
     ResidentRouter,
     NgFor,
     NgOptimizedImage,
-    NgIf
+    NgIf,
   ],
   exports: [
     ReactiveFormsModule

@@ -5,13 +5,23 @@ import {NotFoundComponent} from "./residents/views/components/not-found/not-foun
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/residents/visitors',
+    redirectTo: '/auth/login',
     pathMatch: "full"
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(module => module.AuthModule),
+    // outlet: 'auth'
   },
   {
     path: 'residents',
     loadChildren: () => import('./residents/residents.module').then(module => module.ResidentsModule),
     // outlet: 'residents'
+  },
+  {
+    path: 'auth',
+    redirectTo: 'auth/login',
+    pathMatch: 'full'
   },
   {
     path: '**',

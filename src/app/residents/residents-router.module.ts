@@ -14,24 +14,30 @@ const routes: Routes = [
     path: 'visitors',
     component: VisitorsComponent,
   },
-  {
-    path: 'notifications',
-    component: NotificationsComponent
-  },
-  {
-    path: 'profile',
-    component: ProfileComponent,
-  },
+
   {
     path: 'new-visitor',
     component: NewVisitorComponent
   },
+
   {
     path: 'visitor-details/:visitor',
     component: VisitorDetailsComponent
   },
+
   {
-    path: 'edit', component: EditProfileComponent
+    path: 'notifications',
+    component: NotificationsComponent
+  },
+
+  {
+    path: 'profile',
+    component: ProfileComponent,
+  },
+
+  {
+    path: 'edit-profile', 
+    component: EditProfileComponent
   }
 ]
 

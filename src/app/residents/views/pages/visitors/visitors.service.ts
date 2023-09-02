@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
-import { VisitorsListInterface } from '../../../../shared/interfaces/visitors';
-
+import { VisitorsListInterface } from "src/app/residents/shared/interfaces/visitors";
 @Injectable({
     providedIn: "root"
 })
